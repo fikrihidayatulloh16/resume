@@ -17,14 +17,14 @@ jobs:
       - name: Compile LaTeX document
         uses: xu-cheng/latex-action@v3
         with:
-          root_file: resume.tex # Sesuaikan dengan nama file .tex Anda
+          root_file: CV-Fikri_Hidayatulloh.tex # Sesuaikan dengan nama file .tex Anda
 
       - name: Prepare Deployment Folder
         run: |
           mkdir -p public
-          cp resume.pdf public/resume.pdf
+          cp CV-Fikri_Hidayatulloh.pdf public/CV-Fikri_Hidayatulloh.pdf
           # Membuat file index.html agar link utama tidak 404
-          echo '<!DOCTYPE html><html><head><meta http-equiv="refresh" content="0; url=resume.pdf"></head><body><p>Redirecting to <a href="resume.pdf">resume.pdf</a>...</p></body></html>' > public/index.html
+          echo '<!DOCTYPE html><html><head><meta http-equiv="refresh" content="0; url=CV-Fikri_Hidayatulloh.pdf"></head><body><p>Redirecting to <a href="CV-Fikri_Hidayatulloh.pdf">CV-Fikri_Hidayatulloh.pdf</a>...</p></body></html>' > public/index.html
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
