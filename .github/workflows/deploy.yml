@@ -22,8 +22,9 @@ jobs:
       - name: Prepare Deployment Folder
         run: |
           mkdir -p public
-          mv resume.pdf public/index.pdf 
-          # Mengubah nama ke index.pdf agar bisa diakses langsung lewat URL folder
+          cp resume.pdf public/resume.pdf
+          # Membuat file index.html agar link utama tidak 404
+          echo '<!DOCTYPE html><html><head><meta http-equiv="refresh" content="0; url=resume.pdf"></head><body><p>Redirecting to <a href="resume.pdf">resume.pdf</a>...</p></body></html>' > public/index.html
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
