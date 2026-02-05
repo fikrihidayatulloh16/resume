@@ -1,0 +1,33 @@
+name: Build and Deploy Resume
+
+on:
+  push:
+    branches:
+      - main  # Ganti ke 'master' jika branch utama Anda bernama master
+
+jobs:
+  build_latex:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Set up Git repository
+        uses: actions/checkout@v4
+
+      - name: Compile LaTeX document
+        uses: xu-cheng/latex-action@v3
+        with:
+          root_file: resume.tex # Sesuaikan dengan nama file .tex Anda
+
+      - name: Prepare Deployment Folder
+        run: |
+          mkdir -p public
+          mv resume.pdf public/index.pdf 
+          # Mengubah nama ke index.pdf agar bisa diakses langsung lewat URL folder
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public
+          publish_branch: gh-pages
