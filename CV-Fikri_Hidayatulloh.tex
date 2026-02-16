@@ -1,10 +1,3 @@
-%-------------------------
-% Resume in Latex
-% Author : Jake Gutierrez
-% Based off of: https://github.com/sb2nov/resume
-% License : MIT
-%------------------------
-
 \documentclass[letterpaper,11pt]{article}
 
 \usepackage{latexsym}
@@ -90,26 +83,18 @@
     \end{tabular*}\vspace{-7pt}
 }
 
-\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
-
-\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
-
 \newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
 \newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
 \newcommand{\resumeItemListStart}{\begin{itemize}}
 \newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
 
 %-------------------------------------------
-%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%  RESUME STARTS HERE  %%%%%%
 
 
 \begin{document}
 
 %----------HEADING----------
-% \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
-%   \textbf{\href{http://sourabhbajaj.com/}{\Large Sourabh Bajaj}} & Email : \href{mailto:sourabh@sourabhbajaj.com}{sourabh@sourabhbajaj.com}\\
-%   \href{http://sourabhbajaj.com/}{http://www.sourabhbajaj.com} & Mobile : +1-123-456-7890 \\
-% \end{tabular*}
 
 \begin{center}
     \textbf{\Huge \scshape Muhammad Fikri Hidayatulloh} \\ \vspace{5pt}
@@ -118,9 +103,11 @@
     \href{https://www.linkedin.com/in/fikrihidayatulloh16/}{\underline{linkedin.com/in/fikrihidayatulloh16}} \\ \vspace{2pt}
     \href{https://github.com/fikrihidayatulloh16}{\underline{github.com/fikrihidayatulloh16}} $|$ 
     \href{https://mfh16-portofolio.vercel.app/}{\underline{Personal Portfolio}} \\ \vspace{5pt}
+    
+    % --- UNIVERSAL HEADLINE (STRONG & FLEXIBLE) ---
+    \small{Junior Software Engineer (Cloud \& Infrastructure Enthusiast) $|$ AWS Certified Cloud Practitioner. Specialized in architecting scalable SaaS solutions using \textbf{NestJS}, \textbf{TypeScript}, and \textbf{Linux Systems}. Experienced in managing self-hosted infrastructure using Proxmox VE.}
 \end{center}
 
-\small{Associate Backend Engineer \& AWS Certified Cloud Practitioner. Specialized in architecting scalable NestJS/Next.js applications and managing self-hosted cloud environments (Proxmox/Docker). Delivering quality-performance SaaS solutions with a focus on clean architecture.}
 
 %-----------EDUCATION-----------
 \section{Education}
@@ -130,15 +117,30 @@
       {Applied Bachelor of Computer Science (D4 Teknik Informatika)}{Aug 2020 -- Aug 2025}
   \resumeSubHeadingListEnd
 
+
 %-----------EXPERIENCE-----------
 \section{Experience}
   \resumeSubHeadingListStart
+
+    % --- PENGALAMAN 1: SAAS BKLM (Diangkat jadi Lead Engineer) ---
+    % Universal karena fokus pada Engineering & Leadership
+    \resumeSubheading
+      {Lead Fullstack Engineer (Self-Employed)}{Jan 2026 -- Present}
+      {BKLM Solutions (SaaS Project) $|$ \href{https://app1.mfh.web.id/login}{\underline{Live URL}}}{Remote}
+      \resumeItemListStart
+        \resumeItem{Architected "BKLM CBT", a production-grade assessment platform on \textbf{Linux (Ubuntu/Proxmox)} infrastructure, automating workflows for 500+ users.}
+        \resumeItem{Engineered a \textbf{real-time observability system} using \textbf{WebSockets} and \textbf{Redis} to monitor live exam connectivity, reducing support tickets by 90\%.}
+        \resumeItem{Implemented full-cycle DevOps: Containerized services using \textbf{Docker} and \textbf{PM2}, also secured networking via Cloudflare Tunnels.}
+        \resumeItem{Developed a Modular Monolith backend using \textbf{NestJS (TypeScript)} and PostgreSQL, ensuring Clean Architecture and maintainability.}
+      \resumeItemListEnd
+
+    % --- PENGALAMAN 2: MAGANG (Bukti kerja tim) ---
     \resumeSubheading
       {Fullstack Engineer Intern}{June 2024 -- Oct 2024}
       {PT Ramu Prima Persada (Construction \& IT Consultancy)}{Bandung, Indonesia}
       \resumeItemListStart
         \resumeItem{Developed a web-based construction progress monitoring application using PHP and MySQL to streamline project tracking and reporting.}
-        \resumeItem{Collaborated with construction consultants to translate business requirements into functional technical features.}
+        \resumeItem{Collaborated with the IT team to troubleshoot hardware and network issues in a corporate environment.}
       \resumeItemListEnd
 
   \resumeSubHeadingListEnd
@@ -147,45 +149,37 @@
 %-----------PROJECTS-----------
 \section{Projects}
     \resumeSubHeadingListStart
+      
+      % --- PROYEK 1: INFRASTRUKTUR (Nilai Plus untuk Backend) ---
       \resumeProjectHeading
-          {\textbf{School Counselor Assessment Platform} $|$ \href{https://app1.mfh.web.id/login}{\underline{Live Demo}} $|$ \emph{NestJS, Next.js}}{Jan 2025 -- Present}
+          {\textbf{Personal Cloud Infrastructure (Home Lab)} $|$ \emph{Proxmox VE, Linux, Docker}}{Nov 2025 -- Dec 2025}
           \resumeItemListStart
-            \resumeItem{Developed a full-stack platform with bulk-import Excel functionality and WebSockets for real-time exam monitoring, deployed on a self-hosted Proxmox infrastructure via Cloudflare Tunnels.}
-            \resumeItem{Optimized system responsiveness and maintainability by implementing Clean Architecture principles and a hybrid caching strategy using Redis and TanStack Query, ensuring high performance for concurrent assessments.}
+            \resumeItem{Built a high-availability Private Cloud on bare-metal hardware using \textbf{Proxmox VE (Debian-based)}, managing LXC containers for isolated development environments.}
+            \resumeItem{Configured networking security policies using Cloudflare Zero Tunnels to expose services safely without public IP exposure.}
           \resumeItemListEnd
 
+      % --- PROYEK 2: PYTHON & DATA (Nilai Plus untuk Data/Security) ---
       \resumeProjectHeading
-          {\textbf{Personal Cloud Infrastructure} $|$ \emph{Proxmox VE, Docker, Cloudflare}}{Nov 2025 -- Dec 2025}
+          {\textbf{Web Security \& Performance Research} $|$ \emph{Python, Flask, Grafana}}{Jun 2025 -- Jul 2025}
           \resumeItemListStart
-            \resumeItem{Architected a private cloud environment on 2-core hardware using Proxmox VE, optimizing resource allocation through LXC containers and secure Cloudflare Tunnels for remote access.}
-            \resumeItem{Established a localized CI/CD pipeline for personal projects, facilitating live application deployment and zero-cost production hosting through self-hosted infrastructure management.}
+            \resumeItem{Developed \textbf{Python scripts} to automate performance log collection and visualize system metrics on custom \textbf{Grafana dashboards}.}
+            \resumeItem{Analyzed security-performance trade-offs by implementing Rate Limiting and RBAC.}
           \resumeItemListEnd
 
-      \resumeProjectHeading
-          {\textbf{Web Security \& Performance Research} $|$ \emph{Python, Flask, Grafana, Linux}}{Jun 2025 -- Jul 2025}
-          \resumeItemListStart
-            \resumeItem{Researched security-performance trade-offs by implementing HTTPS, Rate Limiting, and RBAC on resource-constrained servers, visualizing real-time metrics through custom Grafana dashboards.}
-            \resumeItem{Automated performance log collection using Python scripts, proving that structured security measures can optimize CPU efficiency while maintaining robust system integrity.}
-          \resumeItemListEnd
     \resumeSubHeadingListEnd
 
-    
 
-
-
-%
 %-----------PROGRAMMING SKILLS-----------
 \section{Technical Skills}
  \begin{itemize}[leftmargin=0.15in, label={}]
     \small{\item{
-     \textbf{Languages}{: TypeScript, JavaScript, SQL, HTML/CSS, Python, PHP } \\
-     \textbf{Frameworks}{: NestJS, Next.js, React, Node.js, Astro.JS, Spring, Vite, Flask} \\
-     \textbf{Database}{: SQLite, MySQL, PostgreSQL, MongoDB} \\
-     \textbf{Developer Tools}{: Docker, Git, Redis, Socket.io, TanStack Query, Prometheus, Grafana, Sanity.io} \\
-     \textbf{Infrastructure}{: AWS Certified Foundational Cloud Practitioner, Proxmox Virtual Environment, Cloudflare Tunnels, Linux (Debian/Ubuntu), Vercel}
+     \textbf{Languages}{: TypeScript, JavaScript, Python, SQL, Bash/Shell, PHP, HTML/CSS } \\
+     \textbf{Frameworks}{: NestJS, Next.js, Flask, React, Node.js, Astro.JS, Spring} \\
+     \textbf{Database}{: PostgreSQL, MySQL, SQLite, MongoDB} \\
+     \textbf{Developer Tools}{: Docker, Git, Socket.io, TanStack Query, Prometheus, Grafana, Sanity.io, Redis} \\
+     \textbf{Infrastructure}{: AWS Certified Cloud Practitioner, Proxmox VE, Cloudflare Tunnels, Linux (Ubuntu/Debian)}
     }}
  \end{itemize}
-
 
 %-------------------------------------------
 \end{document}
