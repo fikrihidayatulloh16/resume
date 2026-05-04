@@ -1,3 +1,8 @@
+%-------------------------
+% Jake's Resume — Modified (ATS-friendly, clean)
+% Focus: Backend Engineer
+%-------------------------
+
 \documentclass[letterpaper,11pt]{article}
 
 \usepackage{latexsym}
@@ -11,28 +16,15 @@
 \usepackage{fancyhdr}
 \usepackage[english]{babel}
 \usepackage{tabularx}
+\usepackage{microtype}
 \input{glyphtounicode}
 
-
-%----------FONT OPTIONS----------
-% sans-serif
-% \usepackage[sfdefault]{FiraSans}
-% \usepackage[sfdefault]{roboto}
-% \usepackage[sfdefault]{noto-sans}
-% \usepackage[default]{sourcesanspro}
-
-% serif
-% \usepackage{CormorantGaramond}
-% \usepackage{charter}
-
-
 \pagestyle{fancy}
-\fancyhf{} % clear all header and footer fields
+\fancyhf{}
 \fancyfoot{}
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}
 
-% Adjust margins
 \addtolength{\oddsidemargin}{-0.5in}
 \addtolength{\evensidemargin}{-0.5in}
 \addtolength{\textwidth}{1in}
@@ -40,74 +32,124 @@
 \addtolength{\textheight}{1.0in}
 
 \urlstyle{same}
-
 \raggedbottom
 \raggedright
 \setlength{\tabcolsep}{0in}
 
-% Sections formatting
+% Section formatting — thin rule, no color, ATS safe
 \titleformat{\section}{
   \vspace{-4pt}\scshape\raggedright\large
 }{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
 
-% Ensure that generate pdf is machine readable/ATS parsable
 \pdfgentounicode=1
 
 %-------------------------
 % Custom commands
 \newcommand{\resumeItem}[1]{
-  \item\small{
-    {#1 \vspace{-2pt}}
-  }
+  \item\small{#1 \vspace{-2pt}}
 }
 
 \newcommand{\resumeSubheading}[4]{
   \vspace{-2pt}\item
     \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
-      \textbf{#1} & #2 \\
+      \textbf{#1} & \small #2 \\
       \textit{\small#3} & \textit{\small #4} \\
-    \end{tabular*}\vspace{-7pt}
-}
-
-\newcommand{\resumeSubSubheading}[2]{
-    \item
-    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
-      \textit{\small#1} & \textit{\small #2} \\
     \end{tabular*}\vspace{-7pt}
 }
 
 \newcommand{\resumeProjectHeading}[2]{
     \item
     \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
-      \small#1 & #2 \\
+      \small#1 & \small #2 \\
     \end{tabular*}\vspace{-7pt}
 }
 
 \newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
 \newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
-\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=0.2in]}
 \newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
 
 %-------------------------------------------
-%%%%%%  RESUME STARTS HERE  %%%%%%
-
-
 \begin{document}
 
 %----------HEADING----------
-
 \begin{center}
     \textbf{\Huge \scshape Muhammad Fikri Hidayatulloh} \\ \vspace{5pt}
-    \small +62 823-1650-3060 $|$ 
-    \href{mailto:fikrihidayatulloh16@gmail.com}{\underline{fikrihidayatulloh16@gmail.com}} $|$ 
-    \href{https://www.linkedin.com/in/fikrihidayatulloh16/}{\underline{linkedin.com/in/fikrihidayatulloh16}} \\ \vspace{2pt}
-    \href{https://github.com/fikrihidayatulloh16}{\underline{github.com/fikrihidayatulloh16}} $|$ 
-    \href{https://mfh16-portofolio.vercel.app/}{\underline{Personal Portfolio}} \\ \vspace{5pt}
-    
-    % --- UNIVERSAL HEADLINE (STRONG & FLEXIBLE) ---
-    \small{Junior Software Engineer (Cloud \& Infrastructure Enthusiast) $|$ AWS Certified Cloud Practitioner. Specialized in architecting scalable SaaS solutions using NestJS, TypeScript, and Linux Systems. Experienced in managing self-hosted infrastructure using Proxmox VE.}
+    \small +62 823-1650-3060 $|$
+    \href{mailto:fikrihidayatulloh16@gmail.com}{\underline{fikrihidayatulloh16@gmail.com}} $|$
+    \href{https://linkedin.com/in/fikrihidayatulloh16}{\underline{LinkedIn}} $|$
+    \href{https://github.com/fikrihidayatulloh16}{\underline{GitHub}} $|$
+    \href{https://mfh16-portofolio.vercel.app}{\underline{Portfolio}} \\ \vspace{4pt}
+    \small \textit{Backend Engineer — NestJS · TypeScript · PostgreSQL · AWS Certified Cloud Practitioner}
 \end{center}
 
+%-----------SUMMARY-----------
+\section{Summary}
+  \small{
+    I build backend systems that are meant to last — clean architecture, typed APIs, and deployments
+    that don't require babysitting. Most of my recent work has been in NestJS and TypeScript,
+    with real-time features via WebSockets and self-managed infrastructure on Linux.
+    I'm looking for a junior backend role where I can work on a real product and improve my backend skill.
+  }
+  \vspace{-2pt}
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Freelance Backend Engineer — AI Translation Platform}{Feb 2026 -- Mar 2026}
+      {Client project}{Remote}
+      \resumeItemListStart
+        \resumeItem{Wrote a concurrent scraping pipeline in Go that brought report generation time down from a few minutes to under 10 seconds.}
+        \resumeItem{Wired a self-hosted LibreTranslate model into a SvelteKit dashboard via REST — removed the dependency on paid third-party translation APIs entirely.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Lead Backend Engineer — \href{https://app1.mfh.web.id/login}{\underline{BKLM CBT}}}{Jan 2026 -- Feb 2026}
+      {Client project for a school counselor (BK teacher)}{Remote}
+      \resumeItemListStart
+        \resumeItem{Built the backend from scratch using NestJS and PostgreSQL — modular structure with clear separation of concerns so it stays maintainable as the feature set grows.}
+        \resumeItem{Added real-time session sync using WebSockets and Redis; fixed a race condition that caused exam state to drift between clients under concurrent load.}
+        \resumeItem{Set up the full deployment pipeline: Docker, Nginx reverse proxy, Ansible for provisioning, and Cloudflare Tunnels for public access — all on a self-hosted Proxmox server.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Fullstack Engineer Intern}{Jun 2024 -- Oct 2024}
+      {PT Ramu Prima Persada — Construction \& IT Consultancy}{Bandung, Indonesia}
+      \resumeItemListStart
+        \resumeItem{Built a web-based construction monitoring system in PHP/MySQL to track project milestones and resource allocation for the internal ops team.}
+        \resumeItem{Automated the reporting pipeline — what used to take manual aggregation now runs on a script, cutting the effort by around 80\%.}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+%-----------PROJECTS-----------
+\section{Projects}
+  \resumeSubHeadingListStart
+
+    \resumeProjectHeading
+      {\textbf{Web Security \& Performance Research} $|$ \emph{Python, Flask, Prometheus, Grafana}}{Jan 2025 -- Jul 2025}
+      \resumeItemListStart
+        \resumeItem{Set up automated log collection and built custom Grafana dashboards to monitor real-time hardware and app metrics.}
+        \resumeItem{Tested the impact of API rate limiting and RBAC on a Flask server under simulated load — Prometheus metrics showed a measurable drop in CPU usage.}
+      \resumeItemListEnd
+
+    \resumeProjectHeading
+      {\textbf{Student Attendance Backend} $|$ \emph{Java, Spring Boot, WebSocket, MySQL}}{May 2025 -- Jul 2025}
+      \resumeItemListStart
+        \resumeItem{Built the REST API layer with Spring Boot and Spring Data JPA, handling validation and data integrity for attendance records.}
+        \resumeItem{Pushed real-time check-in events to the admin client via WebSocket — no polling needed.}
+      \resumeItemListEnd
+
+    % \resumeProjectHeading
+    %     {\textbf{Personal Cloud Infrastructure (Home Lab)} $|$ \emph{Proxmox VE, Linux, Docker}}{Nov 2025 -- Dec 2025}
+    %     \resumeItemListStart
+    %       \resumeItem{Provisioned a Private Cloud ecosystem using Proxmox VE, deploying Linux LXC containers to isolate development, staging, and production environments.}
+    %       \resumeItem{Configured secure inbound routing via Cloudflare Tunnels (Zero Trust) to expose self-hosted applications without opening firewall ports or utilizing public IPs, significantly reducing the attack surface.}
+    %     \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
 
 %-----------EDUCATION-----------
 \section{Education}
@@ -117,78 +159,17 @@
       {Applied Bachelor of Computer Science (D4 Teknik Informatika)}{Aug 2020 -- Aug 2025}
   \resumeSubHeadingListEnd
 
-
-%-----------EXPERIENCE-----------
-\section{Experience}
-  \resumeSubHeadingListStart
-
-    \resumeSubheading
-      {\textbf{Freelance Software Engineer}}{Feb 2026 -- Mar 2026}
-      {AI Translation Platform}{Remote}
-      \resumeItemListStart
-        \resumeItem{Engineered a simple web scraping pipeline using Go for concurrent data extraction, reducing report generation time from several minutes to seconds.}
-        \resumeItem{Developed a reactive frontend dashboard using SvelteKit and integrated a self-hosted LibreTranslate AI model via REST APIs, eliminating reliance on paid 3rd-party translation APIs and localizing data dynamically.}
-      \resumeItemListEnd
-
-    \resumeSubheading
-      {\textbf{Lead Fullstack Engineer} $|$ \textnormal{\href{https://app1.mfh.web.id/login}{\underline{Live App}}}}{Jan 2026 -- Feb 2026}
-      {BKLM CBT Assessment System}{Remote}
-      \resumeItemListStart
-        \resumeItem{Architected a type-safe Modular Monolith using NestJS and PostgreSQL, implementing Clean Architecture to ensure maintainable data flow for high-concurrency assessment workloads.}
-        \resumeItem{Engineered a real-time observability system using WebSockets and Redis, optimizing network throughput via WebSocket-only transport to resolve session-sync issues and minimize latency.}
-        \resumeItem{Automated end-to-end deployment on Proxmox using Docker and Nginx Reverse Proxy; leveraged Ansible for Infrastructure as Code and Cloudflare Tunnels for secure, high-performance public access.}
-      \resumeItemListEnd
-
-    \resumeSubheading
-      {Fullstack Engineer Intern}{June 2024 -- Oct 2024}
-      {PT Ramu Prima Persada (Construction \& IT Consultancy)}{Bandung, Indonesia}
-      \resumeItemListStart
-        \resumeItem{Developed a monolithic web-based construction monitoring system using PHP and MySQL, modeling relational databases to track project milestones and resource allocation.}
-        \resumeItem{Implemented automated data aggregation workflows, standardizing output formats and reducing manual reporting effort by 80\%.}
-      \resumeItemListEnd
-
-  \resumeSubHeadingListEnd
-
-
-%-----------PROJECTS-----------
-\section{Projects}
-    \resumeSubHeadingListStart
-      
-      % \resumeProjectHeading
-      %     {\textbf{Personal Cloud Infrastructure (Home Lab)} $|$ \emph{Proxmox VE, Linux, Docker}}{Nov 2025 -- Dec 2025}
-      %     \resumeItemListStart
-      %       \resumeItem{Provisioned a Private Cloud ecosystem using Proxmox VE, deploying Linux LXC containers to isolate development, staging, and production environments.}
-      %       \resumeItem{Configured secure inbound routing via Cloudflare Tunnels (Zero Trust) to expose self-hosted applications without opening firewall ports or utilizing public IPs, significantly reducing the attack surface.}
-      %     \resumeItemListEnd
-
-      \resumeProjectHeading
-          {\textbf{Web Security \& Performance Research} $|$ \emph{Python, Flask, Grafana}}{Jan 2025 -- Jul 2025}
-          \resumeItemListStart
-            \resumeItem{Developed Python automation scripts for continuous system log collection, visualizing real-time hardware and application metrics on custom Grafana dashboards.}
-            \resumeItem{Researched performance trade-offs by implementing API Rate Limiting and Role-Based Access Control (RBAC), optimizing server configurations to reduce CPU utilization by 10\% under simulated load.}
-          \resumeItemListEnd
-
-      \resumeProjectHeading
-          {\textbf{Student Attendance System} $|$ \emph{Java, Spring Boot, WebSocket, MySQL}}{May 2025 -- Jul 2025}
-          \resumeItemListStart
-              \resumeItem{Engineered a backend system utilizing Java Spring Boot and Hibernate (Spring Data JPA) to handle strict data validation and secure RESTful operations.}
-              \resumeItem{Implemented real-time bi-directional event streaming via WebSockets to instantly push check-in notifications to the administrative client.}
-          \resumeItemListEnd
-
-    \resumeSubHeadingListEnd
-
-
-%-----------PROGRAMMING SKILLS-----------
+%-----------TECHNICAL SKILLS-----------
 \section{Technical Skills}
  \begin{itemize}[leftmargin=0.15in, label={}]
     \small{\item{
-     \textbf{Languages}{: TypeScript, JavaScript, Python, SQL, PHP, Go} \\
-     \textbf{Frameworks}{: NestJS, Next.js, Flask, React, Node.js, Astro.JS, Spring Boot, Svelte} \\
-     \textbf{Database}{: PostgreSQL, MySQL, SQLite, MongoDB} \\
-     \textbf{Developer Tools}{: Docker, Git, Socket.io, TanStack Query, Prometheus, Grafana, Sanity.io, Redis, Hibernate} \\
-     \textbf{Infrastructure}{: AWS Certified Cloud Practitioner, Proxmox VE, Cloudflare Tunnels, Linux (Ubuntu/Debian)}
+     \textbf{Core Languages}{: TypeScript, JavaScript, SQL, Python, Go} \\
+     \textbf{Backend}{: NestJS, Node.js, Spring Boot, Flask — REST, WebSocket, Redis, Prisma, Hibernate} \\
+     \textbf{Databases}{: PostgreSQL, MySQL, MongoDB, SQLite} \\
+     \textbf{Infrastructure}{: Docker, Nginx, Ansible, Proxmox VE, Cloudflare Tunnels, Linux (Ubuntu/Debian)} \\
+     \textbf{Cloud \& Tooling}{: AWS Certified Cloud Practitioner · Git · Prometheus · Grafana} \\
+     \textbf{Frontend (supporting)}{: React, Next.js, SvelteKit}
     }}
  \end{itemize}
 
-%-------------------------------------------
 \end{document}
